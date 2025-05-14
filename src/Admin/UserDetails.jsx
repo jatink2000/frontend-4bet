@@ -18,7 +18,7 @@ function UserDetails() {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:8000/api/usersdetails', {
+      const res = await axios.get('https://backend-4bet.vercel.app/api/usersdetails', {
         params: {
           page: currentPage,
           limit: usersPerPage,
@@ -53,7 +53,7 @@ function UserDetails() {
 
   const exportToCSV = () => {
     // Get all users for export
-    axios.get('http://localhost:8000/api/users/export', {
+    axios.get('https://backend-4bet.vercel.app/api/users/export', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }

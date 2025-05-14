@@ -20,7 +20,7 @@ const AdminRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8000/api/register', {
+      const res = await axios.post('https://backend-4bet.vercel.app/api/register', {
         name: form.name,
         email: form.email,
         password: form.password,

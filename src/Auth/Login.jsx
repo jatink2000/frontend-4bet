@@ -13,7 +13,7 @@ const AdminLogin = () => {
     setError('');
     
     try {
-      const res = await axios.post('http://localhost:8000/admin/login', {
+      const res = await axios.post('https://backend-4bet.vercel.app/admin/login', {
         email,
         password
       });

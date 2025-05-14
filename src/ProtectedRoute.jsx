@@ -17,7 +17,7 @@ const ProtectedRoute = ({ children, adminOnly = true }) => {
 
       try {
         // Verify token and get user data from the server
-        const response = await axios.get('http://localhost:8000/api/verify-auth', {
+        const response = await axios.get('https://backend-4bet.vercel.app/api/verify-auth', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         

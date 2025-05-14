@@ -22,7 +22,7 @@ const AdminDashboard = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:8000/admin-data', {
+        const response = await axios.get('https://backend-4bet.vercel.app/admin-data', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         setUser(response.data);
@@ -58,7 +58,7 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:8000/update-password',
+        'https://backend-4bet.vercel.app/update-password',
         {
           currentPassword,
           newPassword
